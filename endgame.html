@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Endgame</title>
+    <meta charset="UTF-8">
+
+    <!-- P5 libraries -->
+    <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+    <script language="javascript" type="text/javascript" src="libraries/p5.sound.min.js"></script>
+
+    <!-- A-Frame libraries -->
+    <script language="javascript" type="text/javascript" src="libraries/aframe.min.js"></script>
+
+    <!-- AFrameP5 library -->
+    <script language="javascript" type="text/javascript" src="libraries/aframep5.js"></script>
+
+    <script src="scripts/endgame.js" type="text/javascript"></script>
+
+    <link rel="icon" href="assets/images/icon.PNG">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+  </head>
+  <body>
+    <a-scene id="VRScene">
+      <a-assets>
+        <img id='img_end' src="assets/textures/sky_end.jpg"></img>
+        <img id='img_reset' src="assets/textures/sky_dark.png"></img>
+      </a-assets>
+      
+      <a-entity position="0.002 2.447 -1.534" text="width:4;align:center;value:Labyrinth Explorer;color:black;letterSpacing:5;lineHeight:50"></a-entity>
+      <a-entity position="0.08 2 -1.58" text="color:black; letterSpacing:5; lineHeight:50; value:You made it to the end of the maze. Congratulations on solving your own puzzle.; width:2"></a-entity>
+      <a-sky src="#img_end"></a-sky>
+
+    </a-scene>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VR Maze</title>
+
+    <meta charset="UTF-8">
+
+    <!-- P5 libraries -->
+    <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+    <script language="javascript" type="text/javascript" src="libraries/p5.sound.min.js"></script>
+
+    <!-- A-Frame libraries -->
+    <script language="javascript" type="text/javascript" src="libraries/aframe.min.js"></script>
+
+    <!-- AFrameP5 library -->
+    <script language="javascript" type="text/javascript" src="libraries/aframep5.js"></script>
+
+    <!-- P5 Sketch -->
+    <script language="javascript" type="text/javascript" src="scripts/vr_sketch.js"></script>
+    <script language="javascript" type="text/javascript" src="scripts/displayObjects.js"></script>
+    <script language="javascript" type="text/javascript" src="scripts/gridConversion.js"></script>
+</head>
+<body>
+    <a-scene id="VRScene" fog="type:linear; color:black; far:20 near:0" >
+        <a-sky color="white"></a-sky>
+        <!-- <a-entity light="type: spot; angle: 20; target: 10"></a-entity> -->
+        <!-- <a-entity light="type: point; intensity: 0.75; distance: 50; decay: 2 castShadow:true;" -->
+          <!-- position="0 10 -50"></a-entity> -->
+        <a-assets id='VRAssets'>
+            <img id='img_grid1' src="assets/textures/grid1.jpg"></img>
+            <img id='img_grid2' src="assets/textures/grid2.jpg"></img>
+            <img id='img_grass' src="assets/textures/grass2.jpg"></img>
+            <img id='img_wall' src="assets/textures/ice3.jpg"></img>
+            <img id='img_end' src="assets/textures/sky_end.jpg"></img>
+        </a-assets>
+        <a-link href="endgame.html" title="End" image="#img_end" position="0 2 -50"></a-link>
+        <a-light id="bodylight" type="point" color="#79AADF" position="0 0 1" intensity="0.1" distance="5"></a-light>
+        <a-light id="flashlight" type="spot" color="#d2fbff" position="0 0 1" angle="50" penumbra="0.35" intensity="0.71"></a-light>
+    </a-scene>
+</body>
+</html>
